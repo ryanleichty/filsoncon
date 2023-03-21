@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { ToastProvider, ToastViewport } from "~/components/Toast";
 import "~/styles/globals.css";
 
 const interstate = localFont({
@@ -25,7 +26,10 @@ const interstate = localFont({
 export default function App({ Component, pageProps }) {
   return (
     <div className={`${interstate.variable} font-sans`}>
-      <Component {...pageProps} />
+      <ToastProvider>
+        <Component {...pageProps} />
+        <ToastViewport />
+      </ToastProvider>
     </div>
   );
 }
