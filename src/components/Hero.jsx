@@ -66,9 +66,16 @@ export function Hero({ className, ...props }) {
       />
 
       <MotionHeader
-        variants={header}
-        initial="hidden"
-        animate="visible"
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+          transition: {
+            type: "spring",
+            duration: 1,
+          },
+        }}
         className="isolate"
       />
 
