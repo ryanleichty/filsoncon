@@ -1,3 +1,18 @@
+export const menu = [
+  {
+    title: "Speakers",
+    url: "#speakers",
+  },
+  {
+    title: "Schedule",
+    url: "#schedule",
+  },
+  {
+    title: "Location",
+    url: "#location",
+  },
+];
+
 export const speakers = [
   {
     name: "Christian Watson",

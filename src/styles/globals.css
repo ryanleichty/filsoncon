@@ -19,10 +19,14 @@
   --color-antique-950: 48 8% 12%;
   --color-green-800: 166 87% 22%;
 
-  --height-nav: 6rem;
+  --height-nav: 5rem;
   --height-screen: 100vh;
 
   @media (min-width: 640px) {
+    --height-nav: 6rem;
+  }
+
+  @media (min-width: 1024px) {
     --height-nav: 8rem;
   }
 

@@ -2,6 +2,7 @@ import { cx } from "~/utils";
 
 export function MaxWidthWrapper({
   as: Component = "div",
+  full,
   children,
   className,
   ...props
@@ -9,9 +10,11 @@ export function MaxWidthWrapper({
   return (
     <Component
       {...props}
-      className={cx("relative mx-auto w-full px-4 md:px-8", className)}
+      className={cx("mx-auto w-full px-4 md:px-8", className)}
     >
-      {children}
+      <div className={cx("mx-auto", full ? "" : "max-w-screen-2xl")}>
+        {children}
+      </div>
     </Component>
   );
 }

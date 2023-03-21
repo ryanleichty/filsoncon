@@ -1,12 +1,16 @@
 import Head from "next/head";
+import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
+import { Image } from "~/components/Image";
+import { Intro } from "~/components/Intro";
+import { Location } from "~/components/Location";
 import { MaxWidthWrapper } from "~/components/MaxWidthWrapper";
+import { Outro } from "~/components/Outro";
 import { Schedule } from "~/components/Schedule";
 import { Speakers } from "~/components/Speakers";
-import { Footer } from "../components/Footer";
-import { Intro } from "../components/Intro";
-import { Location } from "../components/Location";
-import { Outro } from "../components/Outro";
+import bannerImg1 from "~/images/filson-1.jpg";
+import bannerImg2 from "~/images/filson-7.jpg";
+import bannerImg3 from "~/images/filson-8.jpg";
 
 export default function Home() {
   return (
@@ -18,32 +22,57 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <main>
-        <div className="h-screen bg-black text-antique-100">
-          <Header />
-          <MaxWidthWrapper className="grid h-screen-no-nav place-items-center text-center">
-            <div>
+        <div className="relative bg-black text-antique-100 sm:min-h-screen">
+          <div className="absolute inset-0 bg-antique-100 opacity-50 mix-blend-color" />
+          <Image
+            src={bannerImg1}
+            quality={25}
+            priority
+            alt=""
+            className="absolute h-full w-full select-none object-cover opacity-20"
+          />
+          <Header className="isolate" />
+          <MaxWidthWrapper full className="isolate">
+            <div className="grid place-items-center content-center py-24 text-center sm:min-h-screen-no-nav">
               <h1 className="font-black uppercase">
                 <span className="block text-[6vw] leading-none">The</span>
                 <span className="block text-[12.5vw] leading-none tracking-tight">
                   Journeyman
                 </span>
               </h1>
-              <div className="mt-8 flex items-center justify-center text-3xl">
-                <p className="max-w-xs">Heritage and the Environment</p>
-                <p className="max-w-xs">October 6, 2023 Seattle, Washington</p>
+              <div className="mt-8 flex flex-col items-center justify-center gap-4 text-2xl sm:text-3xl md:flex-row md:gap-8">
+                <p>
+                  Heritage and
+                  <br />
+                  the Environment
+                </p>
+                <div>×</div>
+                <p>
+                  October 6, 2023
+                  <br />
+                  Seattle, Washington
+                </p>
               </div>
-              <p className="mt-12 font-bold uppercase tracking-widest">
+              <p className="mt-8 text-xs font-bold uppercase tracking-widest sm:mt-12 sm:text-base">
                 A Filson company Conference
               </p>
             </div>
           </MaxWidthWrapper>
         </div>
         <Intro />
-        <Speakers />
-        <div className="h-screen bg-black"></div>
-        <Schedule />
-        <div className="h-screen bg-black"></div>
-        <Location />
+        <Speakers id="speakers" />
+        <Image
+          src={bannerImg2}
+          alt="A frontiersman on horseback leading another horse through the great American West."
+          className="aspect-[4/3] w-full object-cover xl:h-screen"
+        />
+        <Schedule id="schedule" />
+        <Image
+          src={bannerImg3}
+          alt="A sailor working the sails on a ship."
+          className="aspect-[4/3] w-full object-cover xl:h-screen"
+        />
+        <Location id="location" />
         <Outro />
         <Footer />
       </main>

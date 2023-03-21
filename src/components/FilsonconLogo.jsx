@@ -1,4 +1,4 @@
-export function FilsonconLogo() {
+export function FilsonconLogo({ ...props }) {
   return (
     <svg
       width="397"
@@ -6,6 +6,8 @@ export function FilsonconLogo() {
       viewBox="0 0 397 34"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="h-5 w-full sm:h-full"
+      {...props}
     >
       <path
         d="M0 28.0618H14.4V25.7605H9.86301L8.21918 24.1166V17.5413H11.9342L13.5781 19.1851V21.6509H15.8795V11.1303H13.5781V13.5961L11.9342 15.2399H8.21918V7.34952H16.8329L19.2658 9.7824V13.4975H21.5671V5.04815H0V7.34952H2.46575L4.10959 8.99336V24.1166L2.46575 25.7605H0V28.0618Z"

@@ -1,29 +1,51 @@
+import { Image } from "~/components/Image";
 import { MaxWidthWrapper } from "~/components/MaxWidthWrapper";
 import { speakers } from "~/data";
+import speakerImg1 from "~/images/filson-3.jpg";
+import speakerImg2 from "~/images/filson-4.jpg";
+import speakerImg3 from "~/images/filson-5.jpg";
+import speakerImg4 from "~/images/filson-6.jpg";
+import { cx } from "../utils";
+import { Heading } from "./Heading";
 
-export function Speakers() {
+const speakerImages = [speakerImg1, speakerImg2, speakerImg3, speakerImg4];
+
+export function Speakers({ className, ...props }) {
   return (
-    <MaxWidthWrapper className="bg-antique-50 py-20">
-      <h2 className="text-center text-8xl font-bold uppercase">Speakers</h2>
-      <div className="mt-16 grid grid-cols-2 gap-5 lg:grid-cols-4">
-        {speakers.map((speaker) => {
-          return (
-            <div key={speaker.name} className="grid gap-5">
-              <div className="aspect-square bg-antique-100"></div>
-              <div className="text-center">
-                <div className="text-xs font-bold uppercase leading-none tracking-widest opacity-70">
-                  {speaker.title}
-                </div>
-                <h3 className="mt-2 text-2xl font-bold uppercase leading-7">
-                  {speaker.name}
-                </h3>
-                <div className="mt-2.5 text-xs font-bold uppercase leading-none tracking-widest opacity-70">
-                  {speaker.location}
+    <MaxWidthWrapper
+      as="section"
+      className={cx("bg-antique-50", className)}
+      {...props}
+    >
+      <div className="py-16 sm:py-20">
+        <Heading size="lg" className="text-center">
+          Speakers
+        </Heading>
+        <div className="mt-12 grid grid-cols-2 gap-5 sm:mt-16 lg:grid-cols-4">
+          {speakers.map((speaker, i) => {
+            return (
+              <div key={speaker.name} className="grid gap-5">
+                <Image
+                  src={speakerImages[i]}
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  alt={speaker.name}
+                  className="aspect-square bg-antique-100 object-cover"
+                />
+                <div className="text-center">
+                  <div className="text-xs font-bold uppercase leading-none tracking-widest opacity-70">
+                    {speaker.title}
+                  </div>
+                  <h3 className="mt-2 text-2xl font-bold uppercase leading-7">
+                    {speaker.name}
+                  </h3>
+                  <div className="mt-2.5 text-xs font-bold uppercase leading-none tracking-widest opacity-70">
+                    {speaker.location}
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </MaxWidthWrapper>
   );

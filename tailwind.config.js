@@ -39,6 +39,11 @@ module.exports = {
         "screen-no-nav":
           "calc(var(--height-screen, 100vh) - var(--height-nav))",
       },
+      minHeight: {
+        screen: "var(--height-screen, 100vh)",
+        "screen-no-nav":
+          "calc(var(--height-screen, 100vh) - var(--height-nav))",
+      },
     },
   },
   plugins: [require("prettier-plugin-tailwindcss")],
