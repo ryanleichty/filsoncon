@@ -35,9 +35,7 @@ export function Toast({ title, description, children, ...props }) {
 
 export function ToastProvider({ children, ...props }) {
   return (
-    <ToastPrimitive.Provider duration={5000000} {...props}>
-      {children}
-    </ToastPrimitive.Provider>
+    <ToastPrimitive.Provider {...props}>{children}</ToastPrimitive.Provider>
   );
 }
 

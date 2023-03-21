@@ -59,8 +59,8 @@ export const Header = React.forwardRef(function Header(
         </Button>
       </nav>
       <Toast
-        // open={open}
-        // onOpenChange={setOpen}
+        open={open}
+        onOpenChange={setOpen}
         title="Registered"
         description="Filsoncon 2023"
       >
