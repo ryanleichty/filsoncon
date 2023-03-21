@@ -17,7 +17,18 @@
   --color-antique-800: 42 14% 27%;
   --color-antique-900: 43 8% 17%;
   --color-antique-950: 48 8% 12%;
-  --color-green-800: 166 87% 22%;
+
+  --color-green-50: 169 67% 95%;
+  --color-green-100: 167 61% 85%;
+  --color-green-200: 166 65% 74%;
+  --color-green-300: 167 60% 62%;
+  --color-green-400: 166 68% 48%;
+  --color-green-500: 166 89% 37%;
+  --color-green-600: 166 75% 33%;
+  --color-green-700: 166 87% 22%;
+  --color-green-800: 166 95% 16%;
+  --color-green-900: 166 73% 12%;
+  --color-green-950: 164 66% 8%;
 
   --height-nav: 5rem;
   --height-screen: 100vh;

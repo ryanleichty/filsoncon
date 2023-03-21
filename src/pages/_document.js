@@ -8,7 +8,7 @@ export default function Document() {
         <meta property="og:image" content="/og.jpg" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <body className="bg-antique-100 text-black antialiased selection:bg-green-800/75 selection:text-antique-100">
+      <body className="bg-antique-100 text-black antialiased selection:bg-green-700/75 selection:text-antique-100">
         <Main />
         <NextScript />
       </body>

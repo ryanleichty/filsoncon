@@ -9,7 +9,7 @@ export function Button({
   ...props
 }) {
   const baseStyles =
-    "inline-flex items-center gap-3 uppercase font-bold tracking-wide";
+    "inline-flex items-center gap-3 uppercase font-bold tracking-wide transition-colors whitespace-nowrap border border-transparent text-xs text-center outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black duration-100";
 
   const sizeStyles = {
     sm: "h-12 px-6 text-sm",
@@ -17,7 +17,7 @@ export function Button({
   };
 
   const colorStyles = {
-    primary: "bg-green-800 text-antique-100",
+    primary: "bg-green-700 text-antique-100 hover:bg-green-800",
     secondary: "bg-black text-antique-100",
     white: "bg-antique-100 text-black",
   };

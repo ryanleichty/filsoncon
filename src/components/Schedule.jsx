@@ -9,7 +9,7 @@ export function Schedule({ className, ...props }) {
   return (
     <MaxWidthWrapper
       as="section"
-      className={cx("bg-green-800", className)}
+      className={cx("bg-green-700", className)}
       {...props}
     >
       <div className="py-16 text-antique-100 sm:py-20">
