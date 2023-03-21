@@ -70,6 +70,14 @@ export function IconMenu(props) {
   );
 }
 
+export function IconClose(props) {
+  return (
+    <Icon {...props}>
+      <path d="M18 6L6 18M6 6L18 18" strokeLinecap="square" />
+    </Icon>
+  );
+}
+
 export function IconFacebook({ ...props }) {
   return (
     <svg
