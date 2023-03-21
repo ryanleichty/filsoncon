@@ -18,8 +18,6 @@ export default function Home() {
       <Head>
         <title>Filsoncon</title>
         <meta name="description" content="Heritage and the Environment" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.svg" />
       </Head>
       <main>
         <div className="relative bg-black text-antique-100 sm:min-h-screen">
