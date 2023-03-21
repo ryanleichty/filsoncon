@@ -17,7 +17,10 @@ export default function Home() {
     <>
       <Head>
         <title>Filsoncon</title>
-        <meta name="description" content="Heritage and the Environment" />
+        <meta
+          name="description"
+          content="The Journeyman: Heritage and the Environment • October 6, 2023 • Seattle, Washington"
+        />
       </Head>
       <main>
         <div className="relative bg-black text-antique-100 sm:min-h-screen">
