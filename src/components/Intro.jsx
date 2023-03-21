@@ -1,6 +1,7 @@
 import { Image } from "~/components/Image";
 import { MaxWidthWrapper } from "~/components/MaxWidthWrapper";
 import img from "~/images/filson-2.jpg";
+import { Heading } from "./Heading";
 
 export function Intro() {
   return (
@@ -17,10 +18,8 @@ export function Intro() {
             <div className="text-sm font-bold uppercase tracking-wide">
               Purpose
             </div>
-            <h2 className="mt-2 text-3xl font-bold uppercase">
-              Filsoncon 2023
-            </h2>
-            <p className="mt-8 text-xl">
+            <Heading className="mt-2">Filsoncon 2023</Heading>
+            <p className="mt-8 sm:text-xl">
               We believe that our past informs our future. Our brand is a
               reflection of our journey as pioneers and protectors of the
               environment. Join us at our upcoming conference as we explore what

@@ -1,14 +1,5 @@
-import { schedule } from "~/data";
-import { cx } from "~/utils";
-import { Button } from "./Button";
-import { FilsonconLogo } from "./FilsonconLogo";
-import {
-  IconFacebook,
-  IconInstagram,
-  IconMap,
-  IconTwitter,
-  IconYouTube,
-} from "./Icon";
+import { FilsonconFilsonLogo } from "./FilsonconFilsonLogo";
+import { IconFacebook, IconInstagram, IconTwitter, IconYouTube } from "./Icon";
 import { MaxWidthWrapper } from "./MaxWidthWrapper";
 
 export function Footer() {
@@ -21,7 +12,7 @@ export function Footer() {
           </p>
         </div>
         <div className="flex items-center justify-center">
-          <FilsonconLogo />
+          <FilsonconFilsonLogo />
         </div>
         <div className="flex items-center justify-center lg:justify-end">
           <div className="flex items-center justify-center gap-5 lg:justify-end">

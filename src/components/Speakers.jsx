@@ -21,7 +21,7 @@ export function Speakers({ className, ...props }) {
         <Heading size="lg" className="text-center">
           Speakers
         </Heading>
-        <div className="mt-12 grid grid-cols-2 gap-5 sm:mt-16 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-5 gap-y-10 sm:mt-16 lg:grid-cols-4">
           {speakers.map((speaker, i) => {
             return (
               <div key={speaker.name} className="grid gap-5">
@@ -35,9 +35,13 @@ export function Speakers({ className, ...props }) {
                   <div className="text-xs font-bold uppercase leading-none tracking-widest opacity-70">
                     {speaker.title}
                   </div>
-                  <h3 className="mt-2 text-2xl font-bold uppercase leading-7">
+                  <Heading
+                    lvl={3}
+                    size="sm"
+                    className="mt-2 leading-[1.1!important]"
+                  >
                     {speaker.name}
-                  </h3>
+                  </Heading>
                   <div className="mt-2.5 text-xs font-bold uppercase leading-none tracking-widest opacity-70">
                     {speaker.location}
                   </div>

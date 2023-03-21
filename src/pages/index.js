@@ -34,14 +34,14 @@ export default function Home() {
           />
           <Header className="isolate" />
           <MaxWidthWrapper full className="isolate">
-            <div className="grid place-items-center content-center py-24 text-center sm:min-h-screen-no-nav">
+            <div className="grid place-items-center content-center pt-10 pb-20 text-center sm:min-h-screen-no-nav">
               <h1 className="font-black uppercase">
                 <span className="block text-[6vw] leading-none">The</span>
                 <span className="block text-[12.5vw] leading-none tracking-tight">
                   Journeyman
                 </span>
               </h1>
-              <div className="mt-8 flex flex-col items-center justify-center gap-4 text-2xl sm:text-3xl md:flex-row md:gap-8">
+              <div className="mt-8 flex flex-col items-center justify-center gap-2 text-xl sm:text-3xl md:flex-row md:gap-8">
                 <p>
                   Heritage and
                   <br />
