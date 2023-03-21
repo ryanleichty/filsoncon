@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useWindowScroll, useWindowSize } from "react-use";
 import { menu } from "~/data";
 import { cx } from "~/utils";
@@ -8,12 +9,17 @@ import { IconTicket } from "./Icon";
 export function HeaderScroll({ className, ...props }) {
   const { y } = useWindowScroll();
   const { height } = useWindowSize();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    y > height ? setIsScrolled(true) : setIsScrolled(false);
+  }, [y, height]);
 
   return (
     <header
       className={cx(
-        "fixed z-40 hidden h-12 w-full grid-cols-3 items-center justify-between gap-8 bg-black transition-transform lg:grid",
-        y < height ? "-translate-y-full" : null,
+        "fixed z-40 hidden h-12 w-full grid-cols-3 items-center justify-between gap-8 bg-black text-antique-100 transition-transform lg:grid",
+        !isScrolled ? "-translate-y-full" : null,
         className
       )}
       {...props}
